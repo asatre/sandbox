@@ -12,7 +12,9 @@ public class HelloWorldRunner {
 	private static final Logger LOGGER = Logger.getLogger(HelloWorldRunner.class);
 	
 	public static final void main(String[] args) {
-		LOGGER.info(HelloWorld.helloWorld());
+		
+		HelloWorld helloWorld = new HelloWorld();
+		LOGGER.info(helloWorld.helloWorld());
 	}
 	
 }

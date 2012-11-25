@@ -9,13 +9,17 @@ public class TestHelloWorld {
 	@Test
 	public void testHelloWorld() {
 		String expected = "Hello World !";
-		Assert.assertEquals(expected, HelloWorld.helloWorld());
+		
+		HelloWorld helloWorld = new HelloWorld();
+		
+		Assert.assertEquals(expected, helloWorld.helloWorld());
 	}
 
 	@Test
 	public void testSayHello() {
 		String expected = "Hello fred";
-		Assert.assertEquals(expected, HelloWorld.sayHello("fred"));
+		HelloWorld helloWorld = new HelloWorld();
+		Assert.assertEquals(expected, helloWorld.sayHello("fred"));
 	}
 
 }
