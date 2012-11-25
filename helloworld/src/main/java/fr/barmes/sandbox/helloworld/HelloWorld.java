@@ -9,17 +9,38 @@ package fr.barmes.sandbox.helloworld;
 public class HelloWorld {
 
 	
-	private static final String PREFIX = "Hello";
-	private static final String SUFFIX = "World !";
-	private static final String SPACE = " ";
+	private String prefix = null;
+	private String suffix = null;
+	private String space  = null; 
 	
+	
+	private static final String DEFAULT_PREFIX = "Hello";
+	private static final String DEFAULT_SUFFIX = "World !";
+	private static final String DEFAULT_SPACE = " ";
+	
+	
+	public HelloWorld() {
+		this(DEFAULT_PREFIX, DEFAULT_SUFFIX, DEFAULT_SPACE);
+	}
+	
+	
+	public HelloWorld(String prefix, String suffix, String space) {
+		super();
+		this.prefix = prefix;
+		this.suffix = suffix;
+		this.space = space;
+	}
+
+
+
+
 	/**
 	 * Create the standard hello world message
 	 * @return the hello world message
 	 */
-	public static final String helloWorld() {
+	public final String helloWorld() {
 		StringBuffer sb = new StringBuffer();
-		sb.append(PREFIX).append(SPACE).append(SUFFIX);
+		sb.append(this.getPrefix()).append(this.getSpace()).append(this.getSuffix());
 		return sb.toString();
 	}
 	
@@ -28,10 +49,40 @@ public class HelloWorld {
 	 * @param name the name to say hello to
 	 * @return the hello message
 	 */
-	public static String sayHello(String name) {
+	public final String sayHello(String name) {
 		StringBuffer sb = new StringBuffer();
-		sb.append(PREFIX).append(SPACE).append(name);
+		sb.append(this.getPrefix()).append(this.getSpace()).append(name);
 		return sb.toString();
+	}
+
+
+	public String getPrefix() {
+		return prefix;
+	}
+
+
+	public void setPrefix(String prefix) {
+		this.prefix = prefix;
+	}
+
+
+	public String getSuffix() {
+		return suffix;
+	}
+
+
+	public void setSuffix(String suffix) {
+		this.suffix = suffix;
+	}
+
+
+	public String getSpace() {
+		return space;
+	}
+
+
+	public void setSpace(String space) {
+		this.space = space;
 	}
 	
 }
