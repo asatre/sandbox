@@ -18,12 +18,20 @@ public class HelloWorld {
 	private static final String DEFAULT_SUFFIX = "World !";
 	private static final String DEFAULT_SPACE = " ";
 	
-	
+	/**
+	 * Default constructor
+	 */
 	public HelloWorld() {
 		this(DEFAULT_PREFIX, DEFAULT_SUFFIX, DEFAULT_SPACE);
 	}
 	
 	
+	/**
+	 * Full constructor
+	 * @param prefix
+	 * @param suffix
+	 * @param space
+	 */
 	public HelloWorld(String prefix, String suffix, String space) {
 		super();
 		this.prefix = prefix;
