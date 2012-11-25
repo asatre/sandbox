@@ -9,7 +9,7 @@
 
 	<groupId>fr.barmes.sandbox</groupId>
 	<artifactId>sandbox-parent</artifactId>
-	<packaging>jar</packaging>
+	<packaging>pom</packaging>
 	<version>1.0.0</version>
 	<name>sandbox-parent</name>
 
